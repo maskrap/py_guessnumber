@@ -1,0 +1,27 @@
+
+import random
+
+print('Supskies, what yo name is?')
+name = input()
+
+print("Well, " + name + " , I am thinking of a number between 1 and twenty")
+secretNumber = random.randint(1, 20)
+for guessesTaken in range(1, 4):
+    print('Take a guess, you')
+    guess = int(input())
+
+    if guess < secretNumber:
+        print('Your guess is too low, my friend')
+    elif guess > secretNumber:
+        print('Your guess is a bit too high')
+    else:
+        break
+
+if guess == secretNumber:
+    print('You did it, ' + name + '!')
+else:
+    print("I'm sorry, the number I was thinking of was " + str(secretNumber))
+
+
+print('You took this many guesses: ' + str(guessesTaken))
+
